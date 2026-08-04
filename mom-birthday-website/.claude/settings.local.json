@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Content C:\\\\Users\\\\User\\\\Downloads\\\\mom-birthday-website\\\\mom-birthday-website\\\\package.json | Select-String '\\\\\"dev\\\\\"'\")"
+    ]
+  }
+}
