@@ -1,3 +1,5 @@
+const basePath = process.env.GITHUB_PAGES ? '/mom-birthday-website' : ''
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,8 +8,11 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: process.env.GITHUB_PAGES ? '/mom-birthday-website' : '',
-  assetPrefix: process.env.GITHUB_PAGES ? '/mom-birthday-website' : '',
+  basePath,
+  assetPrefix: basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 }
 
 module.exports = nextConfig

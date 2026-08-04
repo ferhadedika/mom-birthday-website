@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { withBasePath } from '@/lib/basePath'
 
 interface PhotoPlaceholderProps {
   src?: string
@@ -49,7 +50,7 @@ export default function PhotoPlaceholder({
     >
       {!showPlaceholder && src && (
         <Image
-          src={src}
+          src={withBasePath(src)}
           alt={alt}
           fill
           priority={priority}
